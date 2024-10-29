@@ -26,12 +26,13 @@ const SiteHeader = ({ history }) => {
   const menuOptions = [
     { label: "Home", path: "/" },
     { label: "Favorites", path: "/movies/favorites" },
-    { label: "Option 3", path: "/" },
+    { label: "Trending Today", path: "/movies/trending/today" },
     { label: "Option 4", path: "/" },
   ];
 
   const handleMenuSelect = (pageURL) => {
     navigate(pageURL, { replace: true });
+    setAnchorEl(null); // close memu
   };
 
   const handleMenu = (event) => {
